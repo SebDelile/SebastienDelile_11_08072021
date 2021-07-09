@@ -9,8 +9,7 @@ import Error404 from './pages/Error404';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        Hello world !
+      <div className="app">
         <BrowserRouter>
           <Switch>
             <Route exact path="/">
