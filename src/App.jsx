@@ -6,6 +6,7 @@ import About from './pages/About';
 import FlatSheet from './pages/FlatSheet';
 import Error404 from './pages/Error404';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 class App extends Component {
   render() {
@@ -27,6 +28,7 @@ class App extends Component {
               <Error404 />
             </Route>
           </Switch>
+          <Footer />
         </BrowserRouter>
       </div>
     );
