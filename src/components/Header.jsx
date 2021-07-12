@@ -6,7 +6,7 @@ import logo from '../assets/logo-full.svg';
 class Header extends Component {
   render() {
     return (
-      <header className="header">
+      <header className="header container">
         <img className="header__logo" src={logo} alt="logo Kasa" />
         <nav className="header__nav">
           <ul className="header__ul">

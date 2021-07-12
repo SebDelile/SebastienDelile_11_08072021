@@ -1,15 +1,16 @@
 .app {
-  width: 100%;
+  min-width: 20rem;
   min-height: 100%;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   > * {
-    min-width: 20rem;
-    max-width: 90rem;
-    margin: 0 auto;
-    padding: 0 1.25rem;
-    //intermediate breakpoints
-    @media only screen and (min-width: 90rem) {
-      padding: 0 6.25rem;
+    flex: 1;
+    &:first-child,
+    &:last-child {
+      //header & footer
+      flex: 0;
     }
   }
 }
