@@ -5,12 +5,14 @@ import Home from './pages/Home';
 import About from './pages/About';
 import FlatSheet from './pages/FlatSheet';
 import Error404 from './pages/Error404';
+import Header from './components/Header';
 
 class App extends Component {
   render() {
     return (
       <div className="app">
         <BrowserRouter>
+          <Header />
           <Switch>
             <Route exact path="/">
               <Home />
