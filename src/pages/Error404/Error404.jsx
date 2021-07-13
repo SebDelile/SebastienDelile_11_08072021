@@ -1,10 +1,11 @@
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Error404.scss';
+
 class Error404 extends Component {
   render() {
     return (
-      <div className="error404">
+      <div className="error404 container">
         <h2 className="error404__number">404</h2>
         <p className="error404__message">
           Oups! La page que vous demandez n'existe pas.
