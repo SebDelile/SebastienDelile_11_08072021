@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import '../styles/Hero.scss';
+import './Hero.scss';
 
 class Hero extends Component {
   constructor(props) {

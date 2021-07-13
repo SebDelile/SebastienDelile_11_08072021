@@ -1,8 +1,8 @@
 import { Component } from 'react';
-import Hero from '../components/Hero';
-import Gallery from '../components/Gallery';
-import '../styles/Home.scss';
-import heroImage from '../assets/home-hero.png';
+import Hero from '../../components/Hero/Hero';
+import Gallery from '../../components/Gallery/Gallery';
+import './Home.scss';
+import heroImage from '../../assets/home-hero.png';
 
 class Home extends Component {
   render() {

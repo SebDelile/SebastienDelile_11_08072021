@@ -1,6 +1,6 @@
 import { Component } from 'react';
-import Thumbnail from './Thumbnail';
-import '../styles/Gallery.scss';
+import Thumbnail from '../Thumbnail/Thumbnail';
+import './Gallery.scss';
 
 class Gallery extends Component {
   constructor(props) {

@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/Error404.scss';
+import './Error404.scss';
 class Error404 extends Component {
   render() {
     return (
