@@ -1,0 +1,18 @@
+.thumbnail {
+  height: 16rem;
+  border-radius: 0.625rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  color: white;
+  font-weight: 500;
+  font-size: 1.125rem;
+  @media only screen and (min-width: 90rem) {
+    padding: calc(100% - 1.25rem) 1.25rem 1.25rem 1.25rem; // calc(100%-paddingBottom) set ratio to 1:1
+  }
+}
