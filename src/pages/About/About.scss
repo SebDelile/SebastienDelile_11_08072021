@@ -1,0 +1,14 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  &__dropdown-wrapper-wrapper {
+    margin-top: 1.25rem;
+    margin-bottom: 2rem;
+    @media only screen and (min-width: 90rem) {
+      margin-top: 2rem;
+      max-width: 64rem;
+    }
+  }
+}
