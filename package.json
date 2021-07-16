@@ -17,7 +17,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "jsdoc": "./node_modules/.bin/jsdoc src -r -d docs/javascript",
+    "kss": "./node_modules/.bin/kss --source src --destination docs/styleguide --css docs/styleguide/styles.css --homepage docs/styleguide/homepage.md"
   },
   "eslintConfig": {
     "extends": [
@@ -36,5 +38,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "jsdoc": "^3.6.7",
+    "kss": "^3.0.1"
   }
 }
