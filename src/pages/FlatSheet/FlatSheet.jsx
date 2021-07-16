@@ -5,6 +5,7 @@ import Carousel from '../../components/Carousel/Carousel.jsx';
 import Taglist from '../../components/Taglist/Taglist.jsx';
 import Host from '../../components/Host/Host.jsx';
 import Rating from '../../components/Rating/Rating.jsx';
+import DropdownWrapper from '../../components/DropdownWrapper/DropdownWrapper.jsx';
 
 class FlatSheet extends Component {
   constructor(props) {
@@ -52,6 +53,13 @@ class FlatSheet extends Component {
           <Host wrapperClassNest={'flat-sheet__'} host={host} />
           <Rating wrapperClassNest={'flat-sheet__'} rating={rating} />
         </section>
+        <DropdownWrapper
+          categories={[
+            ['Description', description],
+            ['Équipements', equipments],
+          ]}
+          isLargeScreen2columns={true}
+        />
       </main>
     );
   }

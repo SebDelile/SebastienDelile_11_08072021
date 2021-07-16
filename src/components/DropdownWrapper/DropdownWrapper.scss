@@ -1,0 +1,15 @@
+.dropdown-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  row-gap: 1.25rem;
+  @media only screen and (min-width: 90rem) {
+    row-gap: 2rem;
+    &--large-screen-2-col {
+      flex-direction: row;
+      justify-content: space-between;
+      column-gap: 3.75rem;
+    }
+  }
+}
