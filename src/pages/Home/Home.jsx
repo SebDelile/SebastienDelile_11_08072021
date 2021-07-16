@@ -12,6 +12,7 @@ class Home extends Component {
           title="Chez vous, partout et ailleurs"
           image={heroImage}
           isMask={true}
+          isFixedHeight={false}
         />
         <Gallery />
       </main>

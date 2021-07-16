@@ -7,12 +7,16 @@ class Hero extends Component {
     this.state = {};
   }
   render() {
-    const { image, title, isMask } = this.props;
+    const { image, title, isMask, isFixedHeight } = this.props;
     const heroBackgroundStyle = `${
       isMask ? 'linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), ' : ''
     }url(${image})`;
+    const heroClassName = `hero${isFixedHeight ? ' hero--fixed-height' : ''}`;
     return (
-      <div className="hero" style={{ backgroundImage: heroBackgroundStyle }}>
+      <div
+        className={heroClassName}
+        style={{ backgroundImage: heroBackgroundStyle }}
+      >
         {title}
       </div>
     );
