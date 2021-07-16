@@ -12,16 +12,22 @@
     color: $color-primary;
     margin: 0 0.6625rem;
     font-size: 0.75rem;
-    @media only screen and (min-width: 90rem) {
-      font-size: 1.125rem;
+    @media only screen and (min-width: 67.5rem) {
+      font-size: 1rem;
+      @media only screen and (min-width: 90rem) {
+        font-size: 1.125rem;
+      }
     }
   }
   &__picture {
     border-radius: 50%;
     object-fit: cover;
     width: 2rem;
-    @media only screen and (min-width: 90rem) {
-      width: 4rem;
+    @media only screen and (min-width: 67.5rem) {
+      width: 3rem;
+      @media only screen and (min-width: 90rem) {
+        width: 4rem;
+      }
     }
   }
 }

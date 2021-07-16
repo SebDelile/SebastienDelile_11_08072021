@@ -6,15 +6,21 @@
   justify-content: center;
   align-items: center;
   border-radius: 0.625rem;
-  @media only screen and (min-width: 90rem) {
-    border-radius: 1.5rem;
+  @media only screen and (min-width: 45rem) {
+    border-radius: 1rem;
+    @media only screen and (min-width: 90rem) {
+      border-radius: 1.5rem;
+    }
   }
   &__image {
     height: 16rem;
     width: 100%;
     object-fit: cover;
-    @media only screen and (min-width: 90rem) {
-      height: 26rem;
+    @media only screen and (min-width: 45rem) {
+      height: 20rem;
+      @media only screen and (min-width: 90rem) {
+        height: 26rem;
+      }
     }
   }
   &__commands {
@@ -31,20 +37,27 @@
   &__button {
     img {
       width: 1.5rem;
-      @media only screen and (min-width: 90rem) {
-        width: 6rem;
+      @media only screen and (min-width: 45rem) {
+        width: 3rem;
+        @media only screen and (min-width: 90rem) {
+          width: 6rem;
+        }
       }
     }
   }
   &__current-image {
     display: none;
-    @media only screen and (min-width: 90rem) {
+    @media only screen and (min-width: 45rem) {
       display: block;
       align-self: flex-end;
       color: white;
       font-weight: 500;
-      font-size: 1.125rem;
-      margin-bottom: 1.5rem;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+      @media only screen and (min-width: 90rem) {
+        font-size: 1.125rem;
+        margin-bottom: 1.5rem;
+      }
     }
   }
 }

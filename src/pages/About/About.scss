@@ -6,9 +6,9 @@
   &__dropdown-wrapper-wrapper {
     margin-top: 1.25rem;
     margin-bottom: 2rem;
+    max-width: 64rem;
     @media only screen and (min-width: 90rem) {
       margin-top: 2rem;
-      max-width: 64rem;
     }
   }
 }

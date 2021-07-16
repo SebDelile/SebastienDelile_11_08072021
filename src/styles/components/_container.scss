@@ -4,7 +4,10 @@
   width: 100%;
   max-width: 90rem;
   padding: 0 1.25rem;
-  @media only screen and (min-width: 90rem) {
-    padding: 0 6.25rem;
+  @media only screen and (min-width: 45rem) {
+    padding: 0 3.25rem;
+    @media only screen and (min-width: 90rem) {
+      padding: 0 6.25rem;
+    }
   }
 }

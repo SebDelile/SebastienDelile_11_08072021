@@ -4,12 +4,18 @@
   justify-content: flex-start;
   align-items: stretch;
   row-gap: 1.25rem;
-  @media only screen and (min-width: 90rem) {
-    row-gap: 2rem;
-    &--large-screen-2-col {
-      flex-direction: row;
-      justify-content: space-between;
-      column-gap: 3.75rem;
+  @media only screen and (min-width: 45rem) {
+    row-gap: 1.625rem;
+    @media only screen and (min-width: 67.5rem) {
+      row-gap: 2rem;
+      &--large-screen-2-col {
+        flex-direction: row;
+        justify-content: space-between;
+        column-gap: 2.5rem;
+        @media only screen and (min-width: 90rem) {
+          column-gap: 3.75rem;
+        }
+      }
     }
   }
 }
