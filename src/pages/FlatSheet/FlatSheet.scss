@@ -1,5 +1,14 @@
 @import '../../styles/utils/variables';
 
+// FlatSheet
+//
+// Selector: .flat-sheet, flet-sheet__header, flat-sheet__title, flat-sheet__location, flat-sheet__taglist, flat-sheet__host, flat-sheet__rating
+//
+// Organisation is Carousel > header > dropdowns. <br/>
+// Header is a grid with 2 different template areas depending on the screen width. <br/>
+// Margins of the child components of the header are indicated here because it's grid implementation dependent.
+//
+// Styleguide Page - FlatSheet
 .flat-sheet {
   margin-top: 0.75rem;
   margin-bottom: 2rem;

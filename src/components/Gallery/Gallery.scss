@@ -1,5 +1,12 @@
 @import '../../styles/utils/variables';
 
+// Gallery
+//
+// Selector: .gallery
+//
+// Grid display, with a variation of the number of columns depending on screen's width.
+//
+// Styleguide Component - Gallery
 .gallery {
   display: grid;
   grid-template-columns: 1fr;

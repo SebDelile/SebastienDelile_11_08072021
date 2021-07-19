@@ -1,5 +1,12 @@
 @import '../../styles/utils/variables';
 
+// Host
+//
+// Selector: .host, .host__name, .host__picture
+//
+// Horizontal flex with the name on the left (text-aligned to the right) and the picture on the right.
+//
+// Styleguide Component - Host
 .host {
   display: flex;
   flex-direction: row;

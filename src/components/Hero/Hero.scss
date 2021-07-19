@@ -1,3 +1,12 @@
+// Hero
+//
+// Selector: .hero, .hero--fixed-height
+//
+// It has a background image added with inline CSS. a mask can also be added with inline CSS depending on props (black with 30% opacity). <br/>
+// Inner text is on the left for small screen and centered for large one. <br/>
+// Depending on props the height can be fixed whatever the screen with the class modifier &--fixed-height.
+//
+// Styleguide Component - Hero
 .hero {
   overflow: hidden;
   width: 100%;

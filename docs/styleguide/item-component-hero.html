@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="docs/styleguide/styles.css"/>
 
 </head>
-<body id="kss-node" >
+<body id="kss-node" class="kss-fullscreen-mode">
 
 <div class="kss-sidebar kss-style">
   <header class="kss-header">
@@ -27,8 +27,18 @@
         </a>
       </li>
       <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-1.html">
-          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Button</span>
+        <a class="kss-nav__menu-link" href="section-common-styles.html">
+          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Common styles</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-component.html">
+          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Component</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-page.html">
+          <span class="kss-nav__ref">3</span><span class="kss-nav__name">Page</span>
         </a>
       </li>
     </ul>
@@ -37,24 +47,27 @@
 <main class="kss-main" aria-label="Content">
   <article>
 
-    <div id="kssref-1" class="kss-section kss-section--depth-1 ">
+    <div id="kssref-component-hero" class="kss-section kss-section--depth-2 is-fullscreen">
 
       <div class="kss-style">
-        <h1 class="kss-title kss-title--level-1">
-          <a class="kss-title__permalink" href="#kssref-1">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-component-hero">
             <span class="kss-title__ref">
-              1
+              2.7
               <span class="kss-title__permalink-hash">
-                  #permalink
+                  #Component - Hero
               </span>
             </span>
-            Button
+            Hero
           </a>
-        </h1>
+        </h2>
 
 
           <div class="kss-description">
-            <p>Your standard button suitable for clicking.</p>
+            <p>Selector: .hero, .hero--fixed-height</p>
+<p>It has a background image added with inline CSS. a mask can also be added with inline CSS depending on props (black with 30% opacity). <br/>
+Inner text is on the left for small screen and centered for large one. <br/>
+Depending on props the height can be fixed whatever the screen with the class modifier &amp;--fixed-height.</p>
 
           </div>
 
@@ -63,7 +76,7 @@
 
 
         <div class="kss-source kss-style">
-          Source: <code>src/styles/base/_base.scss</code>, line 14
+          Source: <code>src/components/Hero/Hero.scss</code>, line 1
         </div>
 
     </div>

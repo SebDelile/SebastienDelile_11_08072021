@@ -1,3 +1,11 @@
+// Carousel
+//
+// Selector: .carousel, .carousel__image, .carousel__commands, .carousel__button, .carousel__current-image
+//
+// Image is full size in the component, commands wrapper has absolute position and full size also. <br/>
+// Buttons and curent image indicator are flex.
+//
+// Styleguide Component - Carousel
 .carousel {
   width: 100%;
   overflow: hidden;

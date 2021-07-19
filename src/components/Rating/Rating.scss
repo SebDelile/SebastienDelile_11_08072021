@@ -1,3 +1,11 @@
+// Rating
+//
+// Selector: .rating, .rating__star
+//
+// Horizontal flex aligned to the left with a constant gap. <br/>
+// Color of the star is managed using 2 differents svg files.
+//
+// Styleguide Component - Rating
 .rating {
   display: flex;
   flex-direction: row;

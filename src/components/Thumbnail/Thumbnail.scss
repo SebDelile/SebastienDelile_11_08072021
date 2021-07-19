@@ -1,3 +1,12 @@
+// Thumbnail
+//
+// Selector: .Thumbnail
+//
+// It has a background image and a linear-gradient mask added with inline CSS. <br/>
+// Inner text is on the bottom-left. <br/>
+// When more than single column, thumbnail is made square shape using padding-top 100% (minus padding-bottom).
+//
+// Styleguide Component - Thumbnail
 .thumbnail {
   height: 16rem;
   border-radius: 0.625rem;

@@ -1,5 +1,14 @@
 @import '../../styles/utils/variables';
 
+// Header
+//
+// Selector: .header, .header__logo, .header__ul, .header__li, .header__link, .header__link--active
+//
+// Horizontal flex with logo on the left and nav on the right. <br/>
+// The nav contain a list of 2 links, the one corresponding to curent page is underlined. <br/>
+// Display inline-block and big line-height of the li/a allow a large clickable surface.
+//
+// Styleguide Component - Header
 .header {
   display: flex;
   flex-direction: row;

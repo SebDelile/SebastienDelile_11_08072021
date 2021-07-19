@@ -1,3 +1,12 @@
+// Dropdown wrapper
+//
+// Selector: .dropdown-wrapper, .dropdown-wrapper--large-screen-2-col
+//
+// Used to manage the dropdown display : vertical flex in most cases. <br/>
+// If class modifier &--large-screen-2-colis used : the dropdown will be in horizontal flex display on large screen. <br/>
+// In this case the two dropdowns have the same height while open, due to the align-items stretch property.
+//
+// Styleguide Component - Dropdown wrapper
 .dropdown-wrapper {
   display: flex;
   flex-direction: column;

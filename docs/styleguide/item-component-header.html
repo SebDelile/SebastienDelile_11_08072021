@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="docs/styleguide/styles.css"/>
 
 </head>
-<body id="kss-node" >
+<body id="kss-node" class="kss-fullscreen-mode">
 
 <div class="kss-sidebar kss-style">
   <header class="kss-header">
@@ -46,19 +46,40 @@
 </div>
 <main class="kss-main" aria-label="Content">
   <article>
-      <div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview kss-style">
-        <h1>STYLEGUID : CSS class description and usage</h1>
-<p>This is the documentation for the CSS of the App</p>
-<p><a href="index.html">Homepage</a></p>
-<h2>Sumarry:</h2>
-<ol>
-<li><a href="section-commons-styles.html">Common styles</a></li>
-<li><a href="section-component.html">Component</a></li>
-<li><a href="section-page.html">Common page</a></li>
-</ol>
-<p>The documentation is made using <a href="https://github.com/kss-node/kss-node">KSS-node</a></p>
+
+    <div id="kssref-component-header" class="kss-section kss-section--depth-2 is-fullscreen">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-component-header">
+            <span class="kss-title__ref">
+              2.6
+              <span class="kss-title__permalink-hash">
+                  #Component - Header
+              </span>
+            </span>
+            Header
+          </a>
+        </h2>
+
+
+          <div class="kss-description">
+            <p>Selector: .header, .header__logo, .header__ul, .header__li, .header__link, .header__link--active</p>
+<p>Horizontal flex with logo on the left and nav on the right. <br/>
+The nav contain a list of 2 links, the one corresponding to curent page is underlined. <br/>
+Display inline-block and big line-height of the li/a allow a large clickable surface.</p>
+
+          </div>
+
 
       </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>src/components/Header/Header.scss</code>, line 3
+        </div>
+
+    </div>
 </article>
 </main>
 

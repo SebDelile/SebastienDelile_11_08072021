@@ -1,5 +1,13 @@
 @import '../../styles/utils/variables';
 
+// Taglist
+//
+// Selector: .taglist, .taglist__tag
+//
+// Horizontal flex aligned to the left with constant vertical and horizontal gaps. can be wrapped on multiple lines. <br/>
+// Tags are not flexible and always suit content.
+//
+// Styleguide Component - Taglist
 .taglist {
   list-style: none;
   display: flex;
