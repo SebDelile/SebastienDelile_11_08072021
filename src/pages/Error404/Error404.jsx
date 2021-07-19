@@ -2,7 +2,16 @@ import { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Error404.scss';
 
+/**
+ * Render the Error404 page
+ * @extends Component
+ * @hideconstructor
+ */
 class Error404 extends Component {
+  /**
+   * Render the component
+   * @returns {Reactnode} jsx to be injected in the html
+   */
   render() {
     return (
       <div className="error404 container">

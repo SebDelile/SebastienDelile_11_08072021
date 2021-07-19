@@ -3,12 +3,23 @@ import './Carousel.scss';
 import arrowBack from '../../assets/arrow-back.svg';
 import arrowForward from '../../assets/arrow-forward.svg';
 
+/**
+ * Render the Carousel component
+ * @extends Component
+ * @param {object} props
+ * @param {string} props.pictures
+ * @property {object} state - the state of the component
+ * @property {integer} state.currentPicture - the current position of the carousel
+ */
 class Carousel extends Component {
   constructor(props) {
     super(props);
     this.state = { currentPicture: 0 };
   }
 
+  /**
+   * go to the next picture, or go to last picture if current picture is the first one
+   */
   prevPicture = () => {
     const currentPicture = this.state.currentPicture;
     const picturesLength = this.props.pictures.length;
@@ -19,6 +30,9 @@ class Carousel extends Component {
     }
   };
 
+  /**
+   * go to the previous picture, or go to first picture if current picture is the last one
+   */
   nextPicture = () => {
     const currentPicture = this.state.currentPicture;
     const picturesLength = this.props.pictures.length;
@@ -29,6 +43,10 @@ class Carousel extends Component {
     }
   };
 
+  /**
+   * Render the component
+   * @returns {Reactnode} jsx to be injected in the html
+   */
   render() {
     const pictures = this.props.pictures;
     const picturesLength = pictures.length;

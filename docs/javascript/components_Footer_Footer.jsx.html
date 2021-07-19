@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: components/Footer/Footer.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,40 +17,45 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: components/Footer/Footer.jsx</h1>
 
     
 
 
 
     
-
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
     <section>
-        <article><h2>Documentation of the javascript of the App</h2>
-<p><a href="index.html">Homepage</a></p>
-<p>This page allows you to reach a html documentation of the components.
-Parameter, properties and returned values are described.
-Use the side navbar to navigate to the components.</p></article>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { Component } from 'react';
+import './Footer.scss';
+import logo from '../../assets/logo-full-white.svg';
+
+/**
+ * Render the Footer component
+ * @extends Component
+ * @hideconstructor
+ */
+class Footer extends Component {
+  /**
+   * Render the component
+   * @returns {Reactnode} jsx to be injected in the html
+   */
+  render() {
+    return (
+      &lt;footer className="footer__wrapper">
+        &lt;div className="footer container">
+          &lt;img className="footer__logo" src={logo} alt="logo Kasa" />
+          &lt;p className="footer__disclaimer">© 2020 Kasa. All rights reserved&lt;/p>
+        &lt;/div>
+      &lt;/footer>
+    );
+  }
+}
+
+export default Footer;
+</code></pre>
+        </article>
     </section>
-
-
 
 
 

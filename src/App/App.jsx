@@ -8,7 +8,16 @@ import Error404 from '../pages/Error404/Error404.jsx';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 
+/**
+ * Render the App. It contains the router
+ * @extends Component
+ * @hideconstructor
+ */
 class App extends Component {
+  /**
+   * Render the component
+   * @returns {Reactnode} jsx to be injected in the html
+   */
   render() {
     return (
       <div className="app">

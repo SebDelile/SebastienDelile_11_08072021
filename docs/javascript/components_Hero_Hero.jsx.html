@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: components/Hero/Hero.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,40 +17,53 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: components/Hero/Hero.jsx</h1>
 
     
 
 
 
     
-
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
     <section>
-        <article><h2>Documentation of the javascript of the App</h2>
-<p><a href="index.html">Homepage</a></p>
-<p>This page allows you to reach a html documentation of the components.
-Parameter, properties and returned values are described.
-Use the side navbar to navigate to the components.</p></article>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { Component } from 'react';
+import './Hero.scss';
+
+/**
+ * Render the Hero component
+ * @extends Component
+ * @param {object} props
+ * @param {string} props.image - the url of the background image
+ * @param {string} props.title - the title (can be empty)
+ * @param {boolean} props.isMask - to apply or not a 30% opacity black mask on the backgruond image
+ * @param {boolean} props.isFixedHeight - to know if the height has to be fixed whatever the screen width
+ */
+class Hero extends Component {
+  /**
+   * Render the component
+   * @returns {Reactnode} jsx to be injected in the html
+   */
+  render() {
+    const { image, title, isMask, isFixedHeight } = this.props;
+    const heroBackgroundStyle = `${
+      isMask ? 'linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), ' : ''
+    }url(${image})`;
+    const heroClassName = `hero${isFixedHeight ? ' hero--fixed-height' : ''}`;
+    return (
+      &lt;div
+        className={heroClassName}
+        style={{ backgroundImage: heroBackgroundStyle }}
+      >
+        {title}
+      &lt;/div>
+    );
+  }
+}
+
+export default Hero;
+</code></pre>
+        </article>
     </section>
-
-
 
 
 

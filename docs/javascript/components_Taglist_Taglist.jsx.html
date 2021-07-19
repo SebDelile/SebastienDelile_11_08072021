@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: components/Taglist/Taglist.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,40 +17,48 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: components/Taglist/Taglist.jsx</h1>
 
     
 
 
 
     
-
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
     <section>
-        <article><h2>Documentation of the javascript of the App</h2>
-<p><a href="index.html">Homepage</a></p>
-<p>This page allows you to reach a html documentation of the components.
-Parameter, properties and returned values are described.
-Use the side navbar to navigate to the components.</p></article>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { Component } from 'react';
+import './Taglist.scss';
+
+/**
+ * Render the Taglist component
+ * @extends Component
+ * @param {object} props
+ * @param {array} props.tags - the list of the tags corresponding to the flat
+ * @param {string} props.wrapperClassNest - the name of the class of the parent component to apply a className
+ */
+class Taglist extends Component {
+  /**
+   * Render the component
+   * @returns {Reactnode} jsx to be injected in the html
+   */
+  render() {
+    const { tags, wrapperClassNest } = this.props;
+    return (
+      &lt;ul className={`taglist ${wrapperClassNest}taglist`}>
+        {tags.map((tag, index) => (
+          &lt;li className="taglist__tag" key={index}>
+            {tag}
+          &lt;/li>
+        ))}
+      &lt;/ul>
+    );
+  }
+}
+
+export default Taglist;
+</code></pre>
+        </article>
     </section>
-
-
 
 
 

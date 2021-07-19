@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: pages/Home/Home.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,40 +17,50 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: pages/Home/Home.jsx</h1>
 
     
 
 
 
     
-
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
     <section>
-        <article><h2>Documentation of the javascript of the App</h2>
-<p><a href="index.html">Homepage</a></p>
-<p>This page allows you to reach a html documentation of the components.
-Parameter, properties and returned values are described.
-Use the side navbar to navigate to the components.</p></article>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { Component } from 'react';
+import Hero from '../../components/Hero/Hero';
+import Gallery from '../../components/Gallery/Gallery';
+import './Home.scss';
+import heroImage from '../../assets/home-hero.png';
+
+/**
+ * Render the Home page
+ * @extends Component
+ * @hideconstructor
+ */
+class Home extends Component {
+  /**
+   * Render the component
+   * @returns {Reactnode} jsx to be injected in the html
+   */
+  render() {
+    return (
+      &lt;main className="home container">
+        &lt;Hero
+          title="Chez vous, partout et ailleurs"
+          image={heroImage}
+          isMask={true}
+          isFixedHeight={false}
+        />
+        &lt;Gallery />
+      &lt;/main>
+    );
+  }
+}
+
+export default Home;
+</code></pre>
+        </article>
     </section>
-
-
 
 
 

@@ -4,7 +4,16 @@ import Gallery from '../../components/Gallery/Gallery';
 import './Home.scss';
 import heroImage from '../../assets/home-hero.png';
 
+/**
+ * Render the Home page
+ * @extends Component
+ * @hideconstructor
+ */
 class Home extends Component {
+  /**
+   * Render the component
+   * @returns {Reactnode} jsx to be injected in the html
+   */
   render() {
     return (
       <main className="home container">

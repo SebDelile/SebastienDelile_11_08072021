@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: components/Rating/Rating.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,40 +17,60 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: components/Rating/Rating.jsx</h1>
 
     
 
 
 
     
-
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
     <section>
-        <article><h2>Documentation of the javascript of the App</h2>
-<p><a href="index.html">Homepage</a></p>
-<p>This page allows you to reach a html documentation of the components.
-Parameter, properties and returned values are described.
-Use the side navbar to navigate to the components.</p></article>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { Component } from 'react';
+import './Rating.scss';
+import starFull from '../../assets/star-full.svg';
+import starEmpty from '../../assets/star-empty.svg';
+/**
+ * Render the Rating component
+ * @extends Component
+ * @param {object} props
+ * @param {integer} props.rating - the rating of the flat
+ * @param {string} props.wrapperClassNest - the name of the class of the parent component to apply a className
+ */
+class Rating extends Component {
+  /**
+   * Render the component
+   * @returns {Reactnode} jsx to be injected in the html
+   */
+  render() {
+    const { rating, wrapperClassNest } = this.props;
+    return (
+      &lt;div className={`rating ${wrapperClassNest}rating`}>
+        {[...Array(parseInt(rating))].map((value, index) => (
+          &lt;img
+            className="rating__star"
+            key={`${value}${index}`}
+            src={starFull}
+            alt="Etoile pleine"
+          />
+        ))}
+        {[...Array(5 - parseInt(rating))].map((value, index) => (
+          &lt;img
+            className="rating__star"
+            key={`${value}${index}`}
+            src={starEmpty}
+            alt="Etoile vide"
+          />
+        ))}
+      &lt;/div>
+    );
+  }
+}
+
+export default Rating;
+</code></pre>
+        </article>
     </section>
-
-
 
 
 

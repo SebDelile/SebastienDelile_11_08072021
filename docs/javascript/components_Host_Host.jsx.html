@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: components/Host/Host.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,40 +17,52 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: components/Host/Host.jsx</h1>
 
     
 
 
 
     
-
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
     <section>
-        <article><h2>Documentation of the javascript of the App</h2>
-<p><a href="index.html">Homepage</a></p>
-<p>This page allows you to reach a html documentation of the components.
-Parameter, properties and returned values are described.
-Use the side navbar to navigate to the components.</p></article>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { Component } from 'react';
+import './Host.scss';
+
+/**
+ * Render the Host component
+ * @extends Component
+ * @param {object} props
+ * @param {object} props.host - an object containing the name and the picture of the host of the flat
+ * @param {string} props.host.picture - the url of the picture of the host
+ * @param {string} props.host.name - the name of the host
+ * @param {string} props.wrapperClassNest - the name of the class of the parent component to apply a className
+ */
+class Host extends Component {
+  /**
+   * Render the component
+   * @returns {Reactnode} jsx to be injected in the html
+   */
+  render() {
+    const { host, wrapperClassNest } = this.props;
+    const { name, picture } = host;
+    return (
+      &lt;div className={`host ${wrapperClassNest}host`}>
+        &lt;p className="host__name">
+          {name.split(' ')[0]}
+          &lt;br />
+          {name.split(' ')[1]}
+        &lt;/p>
+        &lt;img className="host__picture" src={picture} alt="profil de l'hôte" />
+      &lt;/div>
+    );
+  }
+}
+
+export default Host;
+</code></pre>
+        </article>
     </section>
-
-
 
 
 

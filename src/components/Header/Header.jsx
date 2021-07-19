@@ -3,7 +3,16 @@ import { NavLink } from 'react-router-dom';
 import './Header.scss';
 import logo from '../../assets/logo-full.svg';
 
+/**
+ * Render the Header component
+ * @extends Component
+ * @hideconstructor
+ */
 class Header extends Component {
+  /**
+   * Render the component
+   * @returns {Reactnode} jsx to be injected in the html
+   */
   render() {
     return (
       <header className="header container">
