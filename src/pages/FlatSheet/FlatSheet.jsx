@@ -28,9 +28,7 @@ class FlatSheet extends Component {
     };
     fetchData();
   }
-  setOpenDropdown = (dropdownTitle) => {
-    this.setState({ openDropdown: dropdownTitle });
-  };
+
   render() {
     if (Object.keys(this.state.flatData).length === 0) return null;
     const {
