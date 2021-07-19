@@ -62,7 +62,7 @@ class FlatSheet extends Component {
         <section className="flat-sheet__header">
           <h1 className="flat-sheet__title">{title}</h1>
           <p className="flat-sheet__location">{location}</p>
-          <Taglist wrapperClassNest={'flat-sheet__'} tags={tags} />
+          <Taglist tags={tags} />
           <Host wrapperClassNest={'flat-sheet__'} host={host} />
           <Rating wrapperClassNest={'flat-sheet__'} rating={rating} />
         </section>

@@ -66,7 +66,7 @@
       }
     }
   }
-  &__taglist {
+  .taglist {
     grid-area: taglist;
     margin-top: 0.625rem;
     margin-bottom: 0.625rem;
@@ -75,14 +75,14 @@
       margin-bottom: 0;
     }
   }
-  &__rating {
+  .rating {
     grid-area: rating;
     @media only screen and (min-width: 67.5rem) {
       justify-self: flex-end;
       align-self: flex-start;
     }
   }
-  &__host {
+  .host {
     grid-area: host;
     margin-top: 0.375rem;
     margin-bottom: 0.375rem;

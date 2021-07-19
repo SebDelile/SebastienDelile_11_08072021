@@ -8,7 +8,6 @@ import './Host.scss';
  * @param {object} props.host - an object containing the name and the picture of the host of the flat
  * @param {string} props.host.picture - the url of the picture of the host
  * @param {string} props.host.name - the name of the host
- * @param {string} props.wrapperClassNest - the name of the class of the parent component to apply a className
  */
 class Host extends Component {
   /**
@@ -16,10 +15,10 @@ class Host extends Component {
    * @returns {Reactnode} jsx to be injected in the html
    */
   render() {
-    const { host, wrapperClassNest } = this.props;
+    const { host } = this.props;
     const { name, picture } = host;
     return (
-      <div className={`host ${wrapperClassNest}host`}>
+      <div className="host">
         <p className="host__name">
           {name.split(' ')[0]}
           <br />

@@ -7,7 +7,6 @@ import starEmpty from '../../assets/star-empty.svg';
  * @extends Component
  * @param {object} props
  * @param {integer} props.rating - the rating of the flat
- * @param {string} props.wrapperClassNest - the name of the class of the parent component to apply a className
  */
 class Rating extends Component {
   /**
@@ -15,9 +14,9 @@ class Rating extends Component {
    * @returns {Reactnode} jsx to be injected in the html
    */
   render() {
-    const { rating, wrapperClassNest } = this.props;
+    const { rating } = this.props;
     return (
-      <div className={`rating ${wrapperClassNest}rating`}>
+      <div className="rating">
         {[...Array(parseInt(rating))].map((value, index) => (
           <img
             className="rating__star"

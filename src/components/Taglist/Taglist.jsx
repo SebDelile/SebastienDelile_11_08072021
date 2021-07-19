@@ -6,7 +6,6 @@ import './Taglist.scss';
  * @extends Component
  * @param {object} props
  * @param {array} props.tags - the list of the tags corresponding to the flat
- * @param {string} props.wrapperClassNest - the name of the class of the parent component to apply a className
  */
 class Taglist extends Component {
   /**
@@ -14,9 +13,9 @@ class Taglist extends Component {
    * @returns {Reactnode} jsx to be injected in the html
    */
   render() {
-    const { tags, wrapperClassNest } = this.props;
+    const { tags } = this.props;
     return (
-      <ul className={`taglist ${wrapperClassNest}taglist`}>
+      <ul className="taglist">
         {tags.map((tag, index) => (
           <li className="taglist__tag" key={index}>
             {tag}
