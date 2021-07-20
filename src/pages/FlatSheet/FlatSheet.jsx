@@ -5,6 +5,7 @@ import Taglist from '../../components/Taglist/Taglist.jsx';
 import Host from '../../components/Host/Host.jsx';
 import Rating from '../../components/Rating/Rating.jsx';
 import DropdownWrapper from '../../components/DropdownWrapper/DropdownWrapper.jsx';
+import advertSample from '../../data/adverts-sample.json';
 
 /**
  * Render the FlatSheet page
@@ -23,21 +24,26 @@ class FlatSheet extends Component {
   }
 
   /**
-   * Fetch the Flat data at the initialization of the component and put it in the state
+   * get the Flat data at the initialization of the component and put it in the state
    */
   componentDidMount() {
-    const fetchData = async () => {
-      const response = await fetch('../../adverts-sample.json');
-      const jsonResponse = await response.json();
-      if (jsonResponse && jsonResponse.adverts) {
-        this.setState({
-          flatData: jsonResponse.adverts.find(
-            (advert) => advert.id === this.flatId
-          ),
-        });
-      }
-    };
-    fetchData();
+    // const fetchData = async () => {
+    //   const response = await fetch('../../adverts-sample.json');
+    //   const jsonResponse = await response.json();
+    //   if (jsonResponse && jsonResponse.adverts) {
+    //     this.setState({
+    //       flatData: advertSample.adverts.find(
+    //         (advert) => advert.id === this.flatId
+    //       ),
+    //     });
+    //   }
+    // };
+    // fetchData();
+    this.setState({
+      flatData: advertSample.adverts.find(
+        (advert) => advert.id === this.flatId
+      ),
+    });
   }
 
   /**

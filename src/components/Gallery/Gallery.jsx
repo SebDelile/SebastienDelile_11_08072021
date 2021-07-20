@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import Thumbnail from '../Thumbnail/Thumbnail';
 import './Gallery.scss';
+import advertSample from '../../data/adverts-sample.json';
 
 /**
  * Render the Gallery component.
@@ -17,17 +18,10 @@ class Gallery extends Component {
   }
 
   /**
-   * Fetch the Flat data at the initialization of the component and put it in the state
+   * get the Flat list at the initialization of the component and put it in the state
    */
   componentDidMount() {
-    const fetchData = async () => {
-      const response = await fetch('adverts-sample.json');
-      const jsonResponse = await response.json();
-      if (jsonResponse && jsonResponse.adverts) {
-        this.setState({ adverts: jsonResponse?.adverts });
-      }
-    };
-    fetchData();
+    this.setState({ adverts: advertSample.adverts });
   }
 
   /**
