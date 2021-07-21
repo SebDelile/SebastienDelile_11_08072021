@@ -6,6 +6,7 @@ import Host from '../../components/Host/Host.jsx';
 import Rating from '../../components/Rating/Rating.jsx';
 import DropdownWrapper from '../../components/DropdownWrapper/DropdownWrapper.jsx';
 import advertSample from '../../data/adverts-sample.json';
+import { Redirect } from 'react-router-dom';
 
 /**
  * Render the FlatSheet page
@@ -24,63 +25,58 @@ class FlatSheet extends Component {
   }
 
   /**
-   * get the Flat data at the initialization of the component and put it in the state
+   * get the Flat data at the initialization of the component
+   * if it exists it puts it in the state, if not it put an error message to be recover by the render
    */
   componentDidMount() {
-    // const fetchData = async () => {
-    //   const response = await fetch('../../adverts-sample.json');
-    //   const jsonResponse = await response.json();
-    //   if (jsonResponse && jsonResponse.adverts) {
-    //     this.setState({
-    //       flatData: advertSample.adverts.find(
-    //         (advert) => advert.id === this.flatId
-    //       ),
-    //     });
-    //   }
-    // };
-    // fetchData();
+    const flatData = advertSample.adverts.find(
+      (advert) => advert.id === this.flatId
+    );
     this.setState({
-      flatData: advertSample.adverts.find(
-        (advert) => advert.id === this.flatId
-      ),
+      flatData: flatData ? flatData : 'not found',
     });
   }
 
   /**
    * Render the component
+   * if there is an error during the componentDidMount : redirect to Error404
    * @returns {Reactnode} jsx to be injected in the html
    */
   render() {
     if (Object.keys(this.state.flatData).length === 0) return null;
-    const {
-      description,
-      equipments,
-      host,
-      location,
-      pictures,
-      rating,
-      tags,
-      title,
-    } = this.state.flatData;
-    return (
-      <main className="flat-sheet container">
-        <Carousel pictures={pictures} />
-        <section className="flat-sheet__header">
-          <h1 className="flat-sheet__title">{title}</h1>
-          <p className="flat-sheet__location">{location}</p>
-          <Taglist tags={tags} />
-          <Host wrapperClassNest={'flat-sheet__'} host={host} />
-          <Rating wrapperClassNest={'flat-sheet__'} rating={rating} />
-        </section>
-        <DropdownWrapper
-          categories={[
-            ['Description', description],
-            ['Équipements', equipments],
-          ]}
-          isLargeScreen2columns={true}
-        />
-      </main>
-    );
+    else if (this.state.flatData === 'not found')
+      return <Redirect to={'/error404'} />;
+    else {
+      const {
+        description,
+        equipments,
+        host,
+        location,
+        pictures,
+        rating,
+        tags,
+        title,
+      } = this.state.flatData;
+      return (
+        <main className="flat-sheet container">
+          <Carousel pictures={pictures} />
+          <section className="flat-sheet__header">
+            <h1 className="flat-sheet__title">{title}</h1>
+            <p className="flat-sheet__location">{location}</p>
+            <Taglist tags={tags} />
+            <Host wrapperClassNest={'flat-sheet__'} host={host} />
+            <Rating wrapperClassNest={'flat-sheet__'} rating={rating} />
+          </section>
+          <DropdownWrapper
+            categories={[
+              ['Description', description],
+              ['Équipements', equipments],
+            ]}
+            isLargeScreen2columns={true}
+          />
+        </main>
+      );
+    }
   }
 }
 
