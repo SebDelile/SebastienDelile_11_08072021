@@ -28,7 +28,7 @@ class About extends Component {
   render() {
     return (
       <main className="about container">
-        <Hero image={heroImage} title="" isMask={true} isFixedHeight={true} />
+        <Hero image={heroImage} title="" isFixedHeight={true} />
         <div className="about__dropdown-wrapper-wrapper">
           <DropdownWrapper
             categories={[
