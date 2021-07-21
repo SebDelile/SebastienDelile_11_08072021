@@ -18,15 +18,14 @@ class Thumbnail extends Component {
    */
   render() {
     const { title, cover, id } = this.props;
-    const thumbnailBackground = `linear-gradient(180deg, rgba(255,255,255,0),rgba(0,0,0,0.5)), url("${cover}")`;
     return (
-      <Link to={'/flatsheet/' + id}>
-        <div
-          className="thumbnail"
-          style={{ backgroundImage: thumbnailBackground }}
-        >
-          {title}
-        </div>
+      <Link className="thumbnail" to={'/flatsheet/' + id}>
+        <h3 className="thumbnail__title thumbnail__mask">{title}</h3>
+        <img
+          className="thumbnail__img"
+          src={cover}
+          alt="couverture du logement"
+        />
       </Link>
     );
   }
