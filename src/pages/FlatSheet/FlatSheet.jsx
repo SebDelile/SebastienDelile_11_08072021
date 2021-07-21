@@ -59,9 +59,10 @@ class FlatSheet extends Component {
       } = this.state.flatData;
       return (
         <main className="flat-sheet container">
+          <h1 className="sr-only">Page détail de la location</h1>
           <Carousel pictures={pictures} />
           <section className="flat-sheet__header">
-            <h1 className="flat-sheet__title">{title}</h1>
+            <h2 className="flat-sheet__title">{title}</h2>
             <p className="flat-sheet__location">{location}</p>
             <Taglist tags={tags} />
             <Host wrapperClassNest={'flat-sheet__'} host={host} />

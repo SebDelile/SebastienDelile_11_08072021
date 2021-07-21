@@ -17,6 +17,7 @@ class Rating extends Component {
     const { rating } = this.props;
     return (
       <div className="rating">
+        <h3 className="sr-only">{`Note de la location ${rating} sur 5`}</h3>
         {[...Array(parseInt(rating))].map((value, index) => (
           <img
             className="rating__star"

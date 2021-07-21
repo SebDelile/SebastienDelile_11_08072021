@@ -23,7 +23,7 @@ class Hero extends Component {
         style={{ backgroundImage: `url(${image})` }}
       >
         {title ? (
-          <h1 className="hero__title hero__mask">{title}</h1>
+          <h2 className="hero__title hero__mask">{title}</h2>
         ) : (
           <div className="hero__mask"></div>
         )}

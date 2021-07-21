@@ -18,14 +18,14 @@ class Host extends Component {
     const { host } = this.props;
     const { name, picture } = host;
     return (
-      <div className="host">
-        <p className="host__name">
+      <figure className="host">
+        <figcaption className="host__name">
           {name.split(' ')[0]}
           <br />
           {name.split(' ')[1]}
-        </p>
+        </figcaption>
         <img className="host__picture" src={picture} alt="profil de l'hôte" />
-      </div>
+      </figure>
     );
   }
 }

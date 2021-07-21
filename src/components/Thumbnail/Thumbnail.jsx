@@ -19,7 +19,11 @@ class Thumbnail extends Component {
   render() {
     const { title, cover, id } = this.props;
     return (
-      <Link className="thumbnail" to={'/flatsheet/' + id}>
+      <Link
+        className="thumbnail"
+        to={'/flatsheet/' + id}
+        aria-label="Aller sur la page de la location"
+      >
         <h3 className="thumbnail__title thumbnail__mask">{title}</h3>
         <img
           className="thumbnail__img"

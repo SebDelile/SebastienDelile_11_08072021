@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import { Component } from 'react';
 import './Carousel.scss';
 import arrowBack from '../../assets/arrow-back.svg';
@@ -7,7 +8,7 @@ import arrowForward from '../../assets/arrow-forward.svg';
  * Render the Carousel component
  * @extends Component
  * @param {object} props
- * @param {string} props.pictures
+ * @param {Array} props.pictures
  * @property {object} state - the state of the component
  * @property {integer} state.currentPicture - the current position of the carousel
  */
@@ -51,11 +52,12 @@ class Carousel extends Component {
     const pictures = this.props.pictures;
     const picturesLength = pictures.length;
     return (
-      <div className="carousel">
+      <section className="carousel">
+        <h2 className="sr-only">Caroussel de photo</h2>
         <img
           className="carousel__image"
           src={pictures[this.state.currentPicture]}
-          alt={'photo numéro ' + this.state.currentPicture + 1}
+          alt={`Photo numéro ${this.state.currentPicture + 1}`}
         />
         {picturesLength >= 2 ? (
           <div className="carousel__commands">
@@ -76,7 +78,7 @@ class Carousel extends Component {
             </button>
           </div>
         ) : null}
-      </div>
+      </section>
     );
   }
 }

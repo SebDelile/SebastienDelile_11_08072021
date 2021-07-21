@@ -14,7 +14,8 @@ class Error404 extends Component {
    */
   render() {
     return (
-      <div className="error404 container">
+      <main className="error404 container">
+        <h1 className="sr-only">Page Erreur</h1>
         <h2 className="error404__number">404</h2>
         <p className="error404__message">
           Oups! La page que vous demandez n'existe pas.
@@ -22,7 +23,7 @@ class Error404 extends Component {
         <p className="error404__link">
           <Link to="/">Retourner sur la page d’accueil</Link>
         </p>
-      </div>
+      </main>
     );
   }
 }

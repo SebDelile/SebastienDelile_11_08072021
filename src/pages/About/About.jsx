@@ -28,6 +28,7 @@ class About extends Component {
   render() {
     return (
       <main className="about container">
+        <h1 className="sr-only">Page A propos</h1>
         <Hero image={heroImage} title="" isFixedHeight={true} />
         <div className="about__dropdown-wrapper-wrapper">
           <DropdownWrapper
