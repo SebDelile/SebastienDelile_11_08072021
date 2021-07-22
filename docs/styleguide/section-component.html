@@ -157,7 +157,8 @@
           <div class="kss-description">
             <p>Selector: .carousel, .carousel__image, .carousel__commands, .carousel__button, .carousel__current-image</p>
 <p>Image is full size in the component, commands wrapper has absolute position and full size also. <br/>
-Buttons and current image indicator are flex.</p>
+Buttons and current image indicator are flex. <br/>
+.carousel__button:hover - shadow and grow when hovering.</p>
 
           </div>
 
@@ -166,7 +167,7 @@ Buttons and current image indicator are flex.</p>
 
 
         <div class="kss-source kss-style">
-          Source: <code>src/components/Carousel/Carousel.scss</code>, line 1
+          Source: <code>src/components/Carousel/Carousel.scss</code>, line 3
         </div>
 
     </section>
@@ -192,7 +193,8 @@ Buttons and current image indicator are flex.</p>
 Header is horizontal flex with a title on the left and an icon on the right. Icon is rotated 180deg on dropdown opening. <br/>
 Body contains either a list or a paragraph. There is a fade animation on opening/closing. <br/>
 Dropdown opening is managed by turning the body's opacity, line-height and font-size from zero to final size. There is a shift in animation delay to have it fluent. <br/>
-Body is offset to the top in order to cover the radius at the bottom of the header. A margin and padding are used to compensate the offset.</p>
+Body is offset to the top in order to cover the radius at the bottom of the header. A margin and padding are used to compensate the offset.
+.dropdown__header:hover - shadow when hovering.</p>
 
           </div>
 
@@ -201,7 +203,7 @@ Body is offset to the top in order to cover the radius at the bottom of the head
 
 
         <div class="kss-source kss-style">
-          Source: <code>src/components/Dropdown/Dropdown.scss</code>, line 3
+          Source: <code>src/components/Dropdown/Dropdown.scss</code>, line 4
         </div>
 
     </section>
@@ -321,7 +323,8 @@ Everything is centered. Line height of the disclaimer is fixed, so changing the 
             <p>Selector: .header, .header__logo, .header__ul, .header__li, .header__link, .header__link--active</p>
 <p>Horizontal flex with logo on the left and nav on the right. <br/>
 The nav contain a list of 2 links, the one corresponding to current page is underlined. <br/>
-Display inline-block and big line-height of the li/a allow a large clickable surface.</p>
+Display inline-block and big line-height of the li/a allow a large clickable surface. <br/>
+.header__link:hover - shadow when hovering.</p>
 
           </div>
 
@@ -330,7 +333,7 @@ Display inline-block and big line-height of the li/a allow a large clickable sur
 
 
         <div class="kss-source kss-style">
-          Source: <code>src/components/Header/Header.scss</code>, line 3
+          Source: <code>src/components/Header/Header.scss</code>, line 4
         </div>
 
     </section>
@@ -352,7 +355,8 @@ Display inline-block and big line-height of the li/a allow a large clickable sur
 
           <div class="kss-description">
             <p>Selector: .hero, .hero--fixed-height</p>
-<p>It has a background image added with inline CSS. a mask can also be added with inline CSS depending on props (black with 30% opacity). <br/>
+<p>It has a background image added with inline CSS. <br/>
+there is a mask on the title or the div if no title <br />
 Inner text is on the left for small screen and centered for large one. <br/>
 Depending on props the height can be fixed whatever the screen with the class modifier &amp;--fixed-height.</p>
 
@@ -480,9 +484,11 @@ Tags are not flexible and always suit content.</p>
 
           <div class="kss-description">
             <p>Selector: .Thumbnail</p>
-<p>It has a background image and a linear-gradient mask added with inline CSS. <br/>
-Inner text is on the bottom-left. <br/>
-When more than single column, thumbnail is made square shape using padding-top 100% (minus padding-bottom).</p>
+<p>Everything inside is absolute position and 100% width/height. <br/>
+image is a the first layer, heading and mask on top of it <br/>
+heading text is on the bottom-left. <br/>
+When more than single column, thumbnail is made square shape using padding-top 100%. <br/>
+:hover - shadow when hovering.</p>
 
           </div>
 
@@ -491,7 +497,7 @@ When more than single column, thumbnail is made square shape using padding-top 1
 
 
         <div class="kss-source kss-style">
-          Source: <code>src/components/Thumbnail/Thumbnail.scss</code>, line 1
+          Source: <code>src/components/Thumbnail/Thumbnail.scss</code>, line 3
         </div>
 
     </section>
