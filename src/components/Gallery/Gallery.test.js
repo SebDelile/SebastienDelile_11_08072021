@@ -6,7 +6,7 @@ import advertSample from '../../data/adverts-sample.json';
 describe('GIVEN the Gallery component', () => {
   describe('WHEN it is rendered', () => {
     beforeEach(() =>
-      render(<Gallery adverts={advertSample.adverts} />, {
+      render(<Gallery advertAddress={advertSample} />, {
         wrapper: AllowLinks,
       })
     );

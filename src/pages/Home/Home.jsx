@@ -24,7 +24,7 @@ class Home extends Component {
           image={heroImage}
           isFixedHeight={false}
         />
-        <Gallery adverts={advertSample.adverts} />
+        <Gallery advertAddress={advertSample} />
       </main>
     );
   }

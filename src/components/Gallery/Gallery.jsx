@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
  * To be used with Thumbnail children components inside.
  * @extends Component
  * @param {object} props
- * @param {array} props.adverts - the list of adverts to display
+ * @param {object} props.advertAddress - the location of the list of adverts to display
  * @property {object} state - the state of the component
  * @property {array} state.adverts - a list of flat advertisements, will be obtained from a fetch
  */
@@ -22,7 +22,7 @@ class Gallery extends Component {
    * get the Flat list at the initialization of the component and put it in the state
    */
   componentDidMount() {
-    this.setState({ adverts: this.props.adverts });
+    this.setState({ adverts: this.props.advertAddress.adverts });
   }
 
   /**
@@ -49,7 +49,7 @@ class Gallery extends Component {
 }
 
 Gallery.propTypes = {
-  adverts: PropTypes.arrayOf(PropTypes.Object).isRequired,
+  advertAddress: PropTypes.object.isRequired,
 };
 
 export default Gallery;
