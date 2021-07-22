@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import Thumbnail from '../Thumbnail/Thumbnail';
 import './Gallery.scss';
+import PropTypes from 'prop-types';
 
 /**
  * Render the Gallery component.
@@ -46,5 +47,9 @@ class Gallery extends Component {
       );
   }
 }
+
+Gallery.propTypes = {
+  adverts: PropTypes.arrayOf(PropTypes.Object).isRequired,
+};
 
 export default Gallery;

@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Thumbnail.scss';
+import PropTypes from 'prop-types';
 
 /**
  * Render the Thumbnail component.
@@ -34,5 +35,11 @@ class Thumbnail extends Component {
     );
   }
 }
+
+Thumbnail.propTypes = {
+  title: PropTypes.string.isRequired,
+  cover: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+};
 
 export default Thumbnail;

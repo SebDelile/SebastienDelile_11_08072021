@@ -7,6 +7,7 @@ import Rating from '../../components/Rating/Rating.jsx';
 import DropdownWrapper from '../../components/DropdownWrapper/DropdownWrapper.jsx';
 import advertSample from '../../data/adverts-sample.json';
 import { Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 /**
  * Render the FlatSheet page
@@ -81,5 +82,13 @@ class FlatSheet extends Component {
     }
   }
 }
+
+FlatSheet.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.string,
+    }),
+  }).isRequired,
+};
 
 export default FlatSheet;

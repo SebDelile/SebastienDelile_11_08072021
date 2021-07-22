@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import './Dropdown.scss';
 import arrowMenu from '../../assets/arrow-menu.svg';
+import PropTypes from 'prop-types';
 
 /**
  * Render the Dropdown component.
@@ -63,5 +64,19 @@ class Dropdown extends Component {
     );
   }
 }
+
+Dropdown.propTypes = {
+  title: PropTypes.string.isRequired,
+  body: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string),
+  ]).isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  setOpenDropdown: PropTypes.func.isRequired,
+};
+
+Dropdown.defaultProps = {
+  body: "Il n'y a pas de détail à afficher",
+};
 
 export default Dropdown;

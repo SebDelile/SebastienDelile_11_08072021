@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import './Taglist.scss';
+import PropTypes from 'prop-types';
 
 /**
  * Render the Taglist component
@@ -25,5 +26,9 @@ class Taglist extends Component {
     );
   }
 }
+
+Taglist.propTypes = {
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 
 export default Taglist;

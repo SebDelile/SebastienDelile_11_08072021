@@ -2,6 +2,8 @@ import { Component } from 'react';
 import './Rating.scss';
 import starFull from '../../assets/star-full.svg';
 import starEmpty from '../../assets/star-empty.svg';
+import PropTypes from 'prop-types';
+
 /**
  * Render the Rating component
  * @extends Component
@@ -38,5 +40,9 @@ class Rating extends Component {
     );
   }
 }
+
+Rating.propTypes = {
+  rating: PropTypes.oneOf(['0', '1', '2', '3', '4', '5']).isRequired,
+};
 
 export default Rating;

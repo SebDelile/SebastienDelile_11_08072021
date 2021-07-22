@@ -3,6 +3,7 @@ import { Component } from 'react';
 import './Carousel.scss';
 import arrowBack from '../../assets/arrow-back.svg';
 import arrowForward from '../../assets/arrow-forward.svg';
+import PropTypes from 'prop-types';
 
 /**
  * Render the Carousel component
@@ -82,5 +83,9 @@ class Carousel extends Component {
     );
   }
 }
+
+Carousel.propTypes = {
+  pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 
 export default Carousel;

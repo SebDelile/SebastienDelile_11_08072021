@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import './Hero.scss';
+import PropTypes from 'prop-types';
 
 /**
  * Render the Hero component
@@ -31,5 +32,15 @@ class Hero extends Component {
     );
   }
 }
+
+Hero.propTypes = {
+  title: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  isFixedHeight: PropTypes.bool,
+};
+
+Hero.defaultProps = {
+  isFixedHeight: false,
+};
 
 export default Hero;

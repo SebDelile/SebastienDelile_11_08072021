@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import './Host.scss';
+import PropTypes from 'prop-types';
 
 /**
  * Render the Host component
@@ -29,5 +30,12 @@ class Host extends Component {
     );
   }
 }
+
+Host.propTypes = {
+  host: PropTypes.shape({
+    name: PropTypes.string,
+    picture: PropTypes.string,
+  }).isRequired,
+};
 
 export default Host;

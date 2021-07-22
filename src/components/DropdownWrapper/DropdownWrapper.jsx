@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import Dropdown from '../Dropdown/Dropdown.jsx';
 import './DropdownWrapper.scss';
+import PropTypes from 'prop-types';
 
 /**
  * Render the DropdownWrapper component.
@@ -66,5 +67,16 @@ class DropdownWrapper extends Component {
     );
   }
 }
+
+DropdownWrapper.propTypes = {
+  categories: PropTypes.arrayOf(PropTypes.array).isRequired,
+  isMultipleOpeningAllowed: PropTypes.bool,
+  isLargeScreen2columns: PropTypes.bool,
+};
+
+DropdownWrapper.defaultProps = {
+  isMultipleOpeningAllowed: true,
+  isLargeScreen2columns: false,
+};
 
 export default DropdownWrapper;
