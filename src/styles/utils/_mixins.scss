@@ -1,0 +1,49 @@
+// box-shadow
+//
+// Selector: none
+//
+// Add a shadow on the box when hovering with a transition
+//
+// Styleguide Common styles - Mixin - box-shadow
+@mixin box-shadow($selectedColor: rgba(0, 0, 0, 0.5)) {
+  transition: box-shadow 0.3s;
+  &:hover {
+    box-shadow: 0 0 0.5rem 0.25rem $selectedColor;
+  }
+}
+
+// text-shadow
+//
+// Selector: none
+//
+// Add a shadow on the text (including children node) when hovering with a transition
+//
+// Styleguide Common styles - Mixin - text-shadow
+@mixin text-shadow($selectedColor: rgba(0, 0, 0, 0.5)) {
+  transition: text-shadow 0.3s;
+  * {
+    transition: text-shadow 0.3s;
+  }
+  &:hover {
+    text-shadow: 0 0 0.5rem $selectedColor;
+    * {
+      text-shadow: 0 0 0.5rem $selectedColor;
+    }
+  }
+}
+
+// drop-shadow-and-grow-up
+//
+// Selector: none
+//
+// Add a shadow on the shape and increase the size when hovering with a transition
+//
+// Styleguide Common styles - Mixin - drop-shadow-and-grow-up
+@mixin drop-shadow-and-grow-up($selectedColor: rgba(0, 0, 0, 0.5)) {
+  transition: filter 0.3s, transform 0.3s;
+  transform: scale(1);
+  &:hover {
+    filter: drop-shadow(0 0 0.5rem $selectedColor);
+    transform: scale(1.1);
+  }
+}
