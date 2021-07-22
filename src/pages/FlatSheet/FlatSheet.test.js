@@ -25,7 +25,7 @@ describe('GIVEN the FlatSheet component', () => {
       expect(screen.getByAltText(/profil de l'hôte/i)).toBeTruthy();
       expect(screen.getByText(/Nathalie/i && /Jean/i)).toBeTruthy();
     });
-    test('THEN it should contain the 4 Dropdown with their title', () => {
+    test('THEN it should contain 2 Dropdowns with their title', () => {
       expect(screen.getByRole('button', { name: /description/i })).toBeTruthy();
       expect(screen.getByRole('button', { name: /équipement/i })).toBeTruthy();
     });

@@ -8,6 +8,7 @@ import './DropdownWrapper.scss';
  * @extends Component
  * @param {object} props
  * @param {array} props.categories - a table containing tables with 2 elements each : title and body
+ * @param {boolean} props.isMultipleOpeningAllowed - if not, only one dropdown can be open at a time
  * @param {boolean} props.isLargeScreen2columns - to set the 2-columns display if suitable
  * @property {object} state - the state of the component
  * @property {table} state.openDropdown - a table containing the title of the currently open child dropdowns
@@ -19,7 +20,9 @@ class DropdownWrapper extends Component {
   }
 
   /**
-   * modify the state to add a the title of a dropdown if one is opened, or remove the title of a dropdown if one is closed.
+   * modify the state to remove the title of a dropdown if it is aked to close,
+   * or add the title of a dropdown if it asked to open and multiple opening is allowed.
+   * or replace the current state by the title of a dropdown if it asked to open and multiple opening is not allowed
    * To be passed as a prop to the child Dropdowns
    * @param {string} dropdownTitle
    */
@@ -30,7 +33,11 @@ class DropdownWrapper extends Component {
         openDropdown: openDropdown.filter((e) => e !== dropdownTitle),
       });
     } else {
-      this.setState({ openDropdown: [...openDropdown, dropdownTitle] });
+      if (this.props.isMultipleOpeningAllowed) {
+        this.setState({ openDropdown: [...openDropdown, dropdownTitle] });
+      } else {
+        this.setState({ openDropdown: [dropdownTitle] });
+      }
     }
   };
 

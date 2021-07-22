@@ -7,7 +7,7 @@ describe('GIVEN the About component', () => {
     test('THEN it should contain a hero', () => {
       expect(document.querySelector('.hero')).not.toBeNull();
     });
-    test('THEN it should contain the 4 Dropdown with their title', () => {
+    test('THEN it should contain the 4 Dropdowns with their title', () => {
       expect(screen.getByRole('button', { name: /fiabilité/i })).toBeTruthy();
       expect(screen.getByRole('button', { name: /respect/i })).toBeTruthy();
       expect(screen.getByRole('button', { name: /service/i })).toBeTruthy();

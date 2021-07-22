@@ -39,6 +39,7 @@ class About extends Component {
               ['Sécurité', this.securityText],
             ]}
             isLargeScreen2columns={false}
+            isMultipleOpeningAllowed={false}
           />
         </div>
       </main>

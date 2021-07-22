@@ -74,6 +74,7 @@ class FlatSheet extends Component {
               ['Équipements', equipments],
             ]}
             isLargeScreen2columns={true}
+            isMultipleOpeningAllowed={true}
           />
         </main>
       );
