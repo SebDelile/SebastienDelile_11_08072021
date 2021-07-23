@@ -1,0 +1,54 @@
+@import '../../styles/utils/mixins';
+
+// Thumbnail
+//
+// Selector: .Thumbnail
+//
+// Everything inside is absolute position and 100% width/height. <br/>
+// image is a the first layer, heading and mask on top of it <br/>
+// heading text is on the bottom-left. <br/>
+// When more than single column, thumbnail is made square shape using padding-top 100%. <br/>
+// :hover - shadow when hovering.
+//
+// Styleguide Component - Thumbnail
+.thumbnail {
+  overflow: hidden;
+  position: relative;
+  border-radius: 0.625rem;
+  min-height: 16rem;
+  @include box-shadow;
+  @media only screen and (min-width: 45rem) {
+    padding-top: 100%; // set ratio to 1:1
+  }
+  > * {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+  }
+  &__img {
+    z-index: 1;
+    object-fit: cover;
+  }
+  &__title {
+    z-index: 2;
+    padding: 1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    color: white;
+    font-weight: 500;
+    font-size: 1.125rem;
+  }
+  &__mask {
+    background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.5)
+    );
+  }
+}

@@ -1,0 +1,26 @@
+// App
+//
+// Selector: .app
+//
+// Parent of all .container.<br/>
+// Always take min 100% of the height screen.  <br/>
+// Main section is the flexible part to fill 100% of the height (not header and footer).<br/>
+// Does not reduce width below 20rem (320px)
+//
+// Styleguide Page - App
+.app {
+  min-width: 20rem;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  > * {
+    flex: 1;
+    &:first-child,
+    &:last-child {
+      //header & footer
+      flex: 0;
+    }
+  }
+}

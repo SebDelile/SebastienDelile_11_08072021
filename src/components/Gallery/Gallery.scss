@@ -1,0 +1,38 @@
+@import '../../styles/utils/variables';
+
+// Gallery
+//
+// Selector: .gallery
+//
+// Grid display, with a variation of the number of columns depending on screen's width.
+//
+// Styleguide Component - Gallery
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1.25rem;
+  justify-items: stretch;
+  align-items: stretch;
+  width: 100%;
+  margin: 1.25rem 0;
+  @media only screen and (min-width: 45rem) {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+    column-gap: 2.5rem;
+    margin: 2rem 0;
+    padding: 2.25rem 2rem;
+    background-color: $color-secondary;
+    border-radius: 1rem;
+    @media only screen and (min-width: 67.5rem) {
+      grid-template-columns: repeat(3, 1fr);
+      @media only screen and (min-width: 90rem) {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 3rem;
+        column-gap: 3.75rem;
+        margin: 2.75rem 0;
+        padding: 3.5rem 3rem;
+        border-radius: 1.5rem;
+      }
+    }
+  }
+}

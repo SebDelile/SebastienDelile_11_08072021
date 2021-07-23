@@ -1,0 +1,60 @@
+@import '../../styles/utils/variables';
+@import '../../styles/utils/mixins';
+
+// Error 404
+//
+// Selector: .error404, error404_number, error404__message, error404__link
+//
+// Everything is centered in the page. <br/>
+// error404_link a:hover - shadow when hovering.
+//
+// Styleguide Page - Error 404
+.error404 {
+  color: $color-primary;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  &__number {
+    font-weight: 700;
+    font-size: 6rem;
+    @media only screen and (min-width: 45rem) {
+      font-size: 9rem;
+      @media only screen and (min-width: 67.5rem) {
+        font-size: 14rem;
+        @media only screen and (min-width: 90rem) {
+          font-size: 18rem;
+        }
+      }
+    }
+  }
+  &__message {
+    font-weight: 500;
+    font-size: 1.125rem;
+    @media only screen and (min-width: 45rem) {
+      font-size: 1.5rem;
+      @media only screen and (min-width: 67.5rem) {
+        font-size: 1.875rem;
+        @media only screen and (min-width: 90rem) {
+          font-size: 2.25rem;
+        }
+      }
+    }
+  }
+  &__link {
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 0.875rem;
+    margin-top: 9rem;
+    @media only screen and (min-width: 67.5rem) {
+      font-size: 1rem;
+      margin-top: 10.5rem;
+      @media only screen and (min-width: 90rem) {
+        font-size: 1.125rem;
+        margin-top: 12rem;
+      }
+    }
+    a {
+      @include text-shadow(rgba(0, 0, 0, 0.3));
+    }
+  }
+}

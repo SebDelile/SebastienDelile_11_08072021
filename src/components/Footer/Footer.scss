@@ -1,0 +1,44 @@
+// Footer
+//
+// Selector: .footer, .footer__wrapper, .footer__logo, .footer__disclaimer
+//
+// There is a wrapper to make the background color to be 100% of the screen width (.container is on .footer and not .footer__wrapper).<br/>
+// Everything is centered. Line height of the disclaimer is fixed, so changing the font-size does not change the height of the box.
+//
+// Styleguide Component - Footer
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  @media only screen and (min-width: 45rem) {
+    padding-bottom: 3rem;
+    @media only screen and (min-width: 90rem) {
+      padding-bottom: 1.75rem;
+    }
+  }
+  &__wrapper {
+    background-color: black;
+    width: 100%;
+  }
+  &__logo {
+    height: 3.5rem;
+  }
+  &__disclaimer {
+    font-weight: 500;
+    color: white;
+    text-align: end;
+    line-height: 3rem;
+    font-size: 0.75rem;
+    @media only screen and (min-width: 45rem) {
+      font-size: 1rem;
+      margin-top: 1rem;
+      @media only screen and (min-width: 90rem) {
+        font-size: 1.5rem;
+        margin-top: 2.25rem;
+      }
+    }
+  }
+}

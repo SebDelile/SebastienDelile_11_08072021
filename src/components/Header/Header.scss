@@ -1,0 +1,74 @@
+@import '../../styles/utils/variables';
+@import '../../styles/utils/mixins';
+
+// Header
+//
+// Selector: .header, .header__logo, .header__ul, .header__li, .header__link, .header__link--active
+//
+// Horizontal flex with logo on the left and nav on the right. <br/>
+// The nav contain a list of 2 links, the one corresponding to current page is underlined. <br/>
+// Display inline-block and big line-height of the li/a allow a large clickable surface. <br/>
+// .header__link:hover - shadow when hovering.
+//
+// Styleguide Component - Header
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.25rem;
+  margin-bottom: 1rem;
+  @media only screen and (min-width: 45rem) {
+    margin-top: 1.75rem;
+    @media only screen and (min-width: 90rem) {
+      margin-top: 2.5rem;
+      margin-bottom: 1.25rem;
+    }
+  }
+  &__logo {
+    height: 3rem;
+    @media only screen and (min-width: 45rem) {
+      height: 3.5rem;
+      @media only screen and (min-width: 90rem) {
+        height: 4.25rem;
+      }
+    }
+  }
+  &__ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-items: flex-end;
+    align-items: center;
+    gap: 1.25rem;
+    @media only screen and (min-width: 45rem) {
+      gap: 2.5rem;
+      @media only screen and (min-width: 90rem) {
+        gap: 3.5rem;
+      }
+    }
+  }
+  &__li {
+    color: $color-primary;
+    font-weight: 500;
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 2rem;
+    @media only screen and (min-width: 45rem) {
+      font-size: 1.125rem;
+      line-height: 3rem;
+      @media only screen and (min-width: 90rem) {
+        font-size: 1.5rem;
+        line-height: 4rem;
+      }
+    }
+  }
+  &__link {
+    display: inline-block;
+    height: 100%;
+    @include text-shadow;
+    &--active {
+      text-decoration: underline;
+    }
+  }
+}

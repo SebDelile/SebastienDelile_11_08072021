@@ -1,0 +1,59 @@
+// Reset
+//
+// Sselector: *, *::after, *::before
+//
+// CSS reset for the padding, margin and border box.
+//
+// Styleguide Common styles - Reset
+*,
+*::after,
+*::before {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+// Links
+//
+// Selector: a
+//
+// CSS reset for the link style : no underline, no color change.
+//
+// Styleguide Common styles - Links
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+// Buttons
+//
+// Selector: button
+//
+// CSS reset for the button style : no background, border ...
+//
+// Styleguide Common styles - Buttons
+
+button {
+  background: inherit;
+  border: inherit;
+  cursor: pointer;
+}
+
+// Screen-reader
+//
+// Selector: .sr-only
+//
+// Style to make appear something only to screen reader users (not visible for other users).
+//
+// Styleguide Common styles - Screen-reader
+
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}

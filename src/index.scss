@@ -1,0 +1,16 @@
+@import './styles/base/base';
+@import './styles/base/typography';
+@import './styles/components/container.scss';
+
+// Root
+//
+// Selector: html, body, #root
+//
+// Style to allow the App to take 100% of the screen height.
+//
+// Styleguide Common styles - Root
+html,
+body,
+#root {
+  height: 100%;
+}

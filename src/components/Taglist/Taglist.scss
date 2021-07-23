@@ -1,0 +1,40 @@
+@import '../../styles/utils/variables';
+
+// Taglist
+//
+// Selector: .taglist, .taglist__tag
+//
+// Horizontal flex aligned to the left with constant vertical and horizontal gaps. can be wrapped on multiple lines. <br/>
+// Tags are not flexible and always suit content.
+//
+// Styleguide Component - Taglist
+.taglist {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 0.625rem;
+  row-gap: 0.625rem;
+  &__tag {
+    font-weight: 500;
+    flex: 0 1;
+    white-space: nowrap;
+    color: white;
+    background: $color-primary;
+    border-radius: 0.375rem;
+    font-size: 0.625rem;
+    padding: 0.125rem 1.75rem;
+    @media only screen and (min-width: 67.5rem) {
+      border-radius: 0.5rem;
+      font-size: 0.75rem;
+      padding: 0.175rem 2.125rem;
+      @media only screen and (min-width: 90rem) {
+        border-radius: 0.625rem;
+        font-size: 0.875rem;
+        padding: 0.25rem 2.5rem;
+      }
+    }
+  }
+}
