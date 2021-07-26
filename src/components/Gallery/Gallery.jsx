@@ -22,6 +22,7 @@ class Gallery extends Component {
    * get the Flat list at the initialization of the component and put it in the state
    */
   componentDidMount() {
+    // method to include a fetch when the API will be set up
     this.setState({ adverts: this.props.advertAddress.adverts });
   }
 
@@ -34,7 +35,7 @@ class Gallery extends Component {
     else
       return (
         <section className="gallery">
-          <h2 className="sr-only">Gallery de locations</h2>
+          <h2 className="sr-only">Gallerie de locations</h2>
           {this.state.adverts.map((advert) => (
             <Thumbnail
               key={advert.id}
