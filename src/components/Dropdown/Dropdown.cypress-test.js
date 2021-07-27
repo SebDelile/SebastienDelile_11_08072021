@@ -12,11 +12,10 @@ describe('GIVEN I am on a page containing dropdowns', () => {
   describe('WHEN I land on the page and click to a dropdown', () => {
     beforeEach(() => {
       cy.visit('/about');
+      cy.get('.dropdown').first().click();
     });
     it('THEN should open the dropdown to let the body text to be visible', () => {
-      cy.get('.dropdown').first().as('firstDropdown');
-      cy.get('@firstDropdown').click();
-      cy.get('@firstDropdown').find('.dropdown__body').should('be.visible');
+      cy.get('.dropdown').first().find('.dropdown__body').should('be.visible');
     });
   });
 });
