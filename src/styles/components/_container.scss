@@ -2,7 +2,10 @@
 //
 // Selector: .container
 //
-// Generic class to be used for each child of .App to manage the width/padding properties.
+// Generic class to be used for each child of .App to manage the width/padding properties. <br />
+// calc(XX - (100vw - 100%) in padding compensate the page shift depending on the presence of the Y-scroll bar. <br />
+// at screen of 90rem, the max width is decreased to 88 to ensure the auto-margin is wider than the scrollbar,
+// and so the compensation can be distributed on both side of the padding
 //
 // Styleguide Common styles - Container
 .container {
@@ -10,11 +13,13 @@
   margin-right: auto;
   width: 100%;
   max-width: 90rem;
-  padding: 0 1.25rem;
+  padding: 0 calc(1.25rem - (100vw - 100%)) 0 1.25rem;
   @media only screen and (min-width: 45rem) {
-    padding: 0 3.25rem;
+    padding: 0 calc(3.25rem - (100vw - 100%)) 0 3.25rem;
     @media only screen and (min-width: 90rem) {
-      padding: 0 6.25rem;
+      max-width: 88rem;
+      padding: 0 calc(5.25rem - (100vw - 100%) / 2) 0
+        calc(5.25rem + (100vw - 100%) / 2);
     }
   }
 }
