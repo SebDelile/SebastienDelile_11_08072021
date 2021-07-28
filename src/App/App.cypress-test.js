@@ -1,4 +1,3 @@
-import { wait } from '@testing-library/react';
 import { cy, describe, it, expect } from 'local-cypress';
 
 describe('GIVEN I have a standard screensize (1440*1024)', () => {
