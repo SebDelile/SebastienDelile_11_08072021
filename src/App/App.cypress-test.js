@@ -12,7 +12,7 @@ describe('GIVEN I have a standard screensize (1440*1024)', () => {
     });
   });
 });
-describe('WHEN I have very large viewport height (1440*2048)', () => {
+describe('GIVEN I have very large viewport height (1440*2048)', () => {
   describe('WHEN I am on the application in a random page (/about is a short one)', () => {
     beforeEach(() => {
       cy.viewport(1440, 2048);
@@ -22,6 +22,18 @@ describe('WHEN I have very large viewport height (1440*2048)', () => {
       cy.get('.app').should((app) =>
         expect(app[0].getBoundingClientRect().bottom).to.equal(2048)
       );
+    });
+  });
+});
+describe('GIVEN I am on the Home page,', () => {
+  describe('WHEN I scroll down and I click on the last thumbnail', () => {
+    beforeEach(() => {
+      cy.visit('/');
+      cy.scrollTo('bottom');
+      cy.get('.thumbnail').last().click();
+    });
+    it('THEN should render the FlatSheet page of this location and the scroll position should be at the top', () => {
+      cy.window().its('scrollY').should('equal', 0);
     });
   });
 });

@@ -1,6 +1,7 @@
 import App from './App.jsx';
 import { fireEvent, render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
+window.scrollTo = jest.fn(); //not defined in jest environnement, will be tested in functionnal tests
 
 describe('GIVEN the App component', () => {
   describe('WHEN it is rendered with a pathname "/"', () => {

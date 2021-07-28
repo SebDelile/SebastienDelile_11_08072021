@@ -4,9 +4,10 @@
   "testFiles": "**/*cypress-test.js",
   "pluginsFile": "src/utils//cypress/plugins/index.js",
   "screenshotsFolder": "src/utils/cypress/screenshots",
+  "video": false,
   "videosFolder": "src/utils/cypress/videos",
   "supportFile": "src/utils/cypress/support/index.js",
-  "baseUrl": "http://127.0.0.1:3000",
+  "baseUrl": "http://localhost:3000",
   "viewportHeight": 1024,
   "viewportWidth": 1440,
   "animationDistanceThreshold": 1

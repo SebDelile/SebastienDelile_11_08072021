@@ -7,6 +7,7 @@ import FlatSheet from '../pages/FlatSheet/FlatSheet.jsx';
 import Error404 from '../pages/Error404/Error404.jsx';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
+import ScrollToTop from '../utils/ScrollToTop.js';
 
 /**
  * Render the App. It contains the router
@@ -39,6 +40,7 @@ class App extends Component {
             </Route>
           </Switch>
           <Footer />
+          <ScrollToTop />
         </BrowserRouter>
       </div>
     );

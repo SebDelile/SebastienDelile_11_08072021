@@ -30,6 +30,7 @@ class FlatSheet extends Component {
    * if it exists it puts it in the state, if not it put an error message to be recover by the render
    */
   componentDidMount() {
+    // method to include a fetch when the API will be set up
     const flatData = advertSample.adverts.find(
       (advert) => advert.id === this.flatId
     );

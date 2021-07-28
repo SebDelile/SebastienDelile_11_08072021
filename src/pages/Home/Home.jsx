@@ -16,6 +16,7 @@ class Home extends Component {
    * @returns {Reactnode} jsx to be injected in the html
    */
   render() {
+    //advertSample to be replaced by the url of the data when the API will be set up
     return (
       <main className="home container">
         <h1 className="sr-only">Page d'accueil</h1>

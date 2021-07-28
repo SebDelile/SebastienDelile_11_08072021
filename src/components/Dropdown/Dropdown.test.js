@@ -46,7 +46,7 @@ describe('GIVEN the Dropdown component', () => {
       render(
         <Dropdown
           title="title"
-          body={['body text', 'deuxième élément']}
+          body={['body text', 'second element']}
           isOpen={true}
           setOpenDropdown={() => null}
         />
