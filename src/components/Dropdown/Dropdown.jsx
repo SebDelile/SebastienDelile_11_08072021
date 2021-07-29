@@ -19,7 +19,7 @@ class Dropdown extends Component {
    */
   handleClick = () => {
     const { title, setOpenDropdown } = this.props;
-    setOpenDropdown(title);
+    //setOpenDropdown(title);
   };
 
   /**
